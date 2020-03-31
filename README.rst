@@ -7,7 +7,7 @@ CosmoStat Map
   :target: https://travis-ci.org/sfarrens/cosmostatmap
 
 .. |coveralls| image:: https://coveralls.io/repos/github/sfarrens/cosmostatmap/badge.svg?branch=master
-:target: https://coveralls.io/github/sfarrens/cosmostatmap?branch=master
+  :target: https://coveralls.io/github/sfarrens/cosmostatmap?branch=master
 
 .. |python35| image:: https://img.shields.io/badge/python-3.5-green.svg
   :target: https://www.python.org/
@@ -24,20 +24,19 @@ CosmoStat Map
 
 
 :Author: Samuel Farrens `(samuel.farrens@cea.fr) <samuel.farrens@cea.fr>`_
-  :Author: Samuel Farrens `(samuel.farrens@cea.fr) <samuel.farrens@cea.fr>`_
 
-  :Version: 0.0.0
+:Version: 0.0.0
 
-  :Release Date: 31/03/2020
+:Release Date: 31/03/2020
 
-  :Documentation: N/A
+:Documentation: https://sfarrens.github.io/cosmostatmap
 
-  :Repository: |link-to-repo|
+:Repository: |link-to-repo|
 
-  .. |link-to-repo| raw:: html
+.. |link-to-repo| raw:: html
 
-    <a href="https://github.com/CEA-COSMIC/ModOpt"
-    target="_blank">https://github.com/CEA-COSMIC/ModOpt</a>
+  <a href="https://github.com/CEA-COSMIC/ModOpt"
+  target="_blank">https://github.com/CEA-COSMIC/ModOpt</a>
 
 Requirements
 ------------
