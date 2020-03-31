@@ -32,7 +32,7 @@ script:
 
 # run coverage tests
 after_success:
-  # - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then coveralls; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then coveralls; fi
   # - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then travis-sphinx -o docs/build deploy; fi
 
 # notification settings
