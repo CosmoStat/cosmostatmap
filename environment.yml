@@ -1,0 +1,12 @@
+name: cosmostatmap
+channels:
+  - defaults
+dependencies:
+  - python=3.7
+  - geopandas>=0.6.1
+  - jupyter>=1.0.0
+  - matplotlib
+  - pip>=19.3
+  - pip:
+    - geoplot>=0.4.0
+    - pyyaml>=5.3.1
