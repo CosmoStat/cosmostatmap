@@ -33,8 +33,8 @@ CosmoStat Map
 Requirements
 ------------
 
-- GeoPandas
-- GeoPlot
-- PyYAML
-- Matplotlib
-- Jupyter
+- `GeoPandas <https://geopandas.org/>`_
+- `geoplot <https://residentmario.github.io/geoplot/index.html>`_
+- `Jupyter <https://jupyter.org/>`_
+- `Matplotlib <https://matplotlib.org/>`_
+- `PyYAML <https://pyyaml.org/>`_
