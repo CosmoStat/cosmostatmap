@@ -38,3 +38,21 @@ Requirements
 - `Jupyter <https://jupyter.org/>`_
 - `Matplotlib <https://matplotlib.org/>`_
 - `PyYAML <https://pyyaml.org/>`_
+
+Installation
+------------
+
+.. code-block:: bash
+
+   conda env create -f environment.yml
+   conda activate cosmostatmap
+   python setup.py install
+
+
+Example
+-------
+
+.. code-block:: python
+
+   from cosmostatmap import CosmoStatMap
+   CosmoStatMap('./data/countries.yml').plot()
