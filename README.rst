@@ -29,14 +29,19 @@ CosmoStat Map
 
 :Release Date: 31/03/2020
 
-:Documentation: https://sfarrens.github.io/cosmostatmap
+:Documentation: |link-to-docs|
 
 :Repository: |link-to-repo|
 
+.. |link-to-docs| raw:: html
+
+  <a href="https://sfarrens.github.io/cosmostatmap"
+  target="_blank">https://sfarrens.github.io/cosmostatmap</a>
+  
 .. |link-to-repo| raw:: html
 
-  <a href="https://github.com/CEA-COSMIC/ModOpt"
-  target="_blank">https://github.com/CEA-COSMIC/ModOpt</a>
+  <a href="https://github.com/sfarrens/cosmostatmap"
+  target="_blank">https://github.com/sfarrens/cosmostatmap</a>
 
 Requirements
 ------------
