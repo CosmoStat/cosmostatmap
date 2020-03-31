@@ -16,19 +16,24 @@ branches:
 
 # install package and dependencies
 install:
+  - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+  - bash miniconda.sh -b -p $HOME/miniconda
+  - source "$HOME/miniconda/etc/profile.d/conda.sh"
+  - conda env create -f environment.yml
+  - conda activate cosmostatmap
   - pip install coverage nose pytest pytest-cov
-  # - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then pip install numpy future scipy astropy progressbar2 sphinx sphinx-rtd-theme sphinxcontrib-bibtex numpydoc travis-sphinx coveralls; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then pip install sphinx sphinx-rtd-theme sphinxcontrib-bibtex numpydoc travis-sphinx coveralls; fi
 
 # run unit tests
 script:
   - python setup.py test
-  # - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then sphinx-apidoc -feo docs/source modopt/; fi
-  # - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then travis-sphinx -v -o docs/build build -n -s docs/source; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then sphinx-apidoc -feo docs/source cosmostatmap/; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then travis-sphinx -v -o docs/build build -n -s docs/source; fi
 
 # run coverage tests
 after_success:
-  # - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then coveralls; fi
-  # - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then travis-sphinx -o docs/build deploy; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then coveralls; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then travis-sphinx -o docs/build deploy; fi
 
 # notification settings
 notification:
