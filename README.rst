@@ -1,7 +1,13 @@
 CosmoStat Map
 =============
 
-|python35| |python36| |python37| |python38|
+|travis| |coveralls| |python35| |python36| |python37| |python38| 
+
+.. |travis| image:: https://travis-ci.org/sfarrens/cosmostatmap.svg?branch=master
+  :target: https://travis-ci.org/sfarrens/cosmostatmap
+
+.. |coveralls| image:: https://coveralls.io/repos/github/sfarrens/cosmostatmap/badge.svg?branch=master
+:target: https://coveralls.io/github/sfarrens/cosmostatmap?branch=master
 
 .. |python35| image:: https://img.shields.io/badge/python-3.5-green.svg
   :target: https://www.python.org/
@@ -15,6 +21,9 @@ CosmoStat Map
 .. |python38| image:: https://img.shields.io/badge/python-3.8-green.svg
   :target: https://www.python.org/
 
+
+
+:Author: Samuel Farrens `(samuel.farrens@cea.fr) <samuel.farrens@cea.fr>`_
   :Author: Samuel Farrens `(samuel.farrens@cea.fr) <samuel.farrens@cea.fr>`_
 
   :Version: 0.0.0
