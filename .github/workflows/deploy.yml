@@ -12,30 +12,30 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Set up Conda
+      - name: Set up conda
         uses: conda-incubator/setup-miniconda@v1
         with:
           auto-update-conda: true
           python-version: 3.8
 
-      - name: Conda info
+      - name: Build conda environment
         shell: bash -l {0}
-        run: conda info
+        run: conda env create -f environment.yml
 
-      - name: Install Package
+      - name: Install package
         shell: bash -l {0}
         run: |
           conda activate cosmostatmap
           python setup.py install
 
-      - name: Build Map
+      - name: Build map
         shell: bash -l {0}
         run: |
           conda activate cosmostatmap
           python scripts/generate_map.py
           mv cosmostat_map.png ./build
 
-      - name: GitHub Pages action
+      - name: GitHub pages action
         uses: peaceiris/actions-gh-pages@v3.5.9
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
