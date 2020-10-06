@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches:
+     - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: |
+          wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+          bash miniconda.sh -b -p $HOME/miniconda
+          source "$HOME/miniconda/etc/profile.d/conda.sh"
+          conda env create -f environment.yml
+          conda activate cosmostatmap
+          mkdir build
+      - name: Build Map
+        run: |
+          python scripts/generate_map.py
+          mv cosmostat_map.png ./build
+      - name: GitHub Pages action
+        uses: peaceiris/actions-gh-pages@v3.5.9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build

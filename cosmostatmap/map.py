@@ -117,8 +117,8 @@ class CosmoStatMap:
         for country in country_list:
             self._highlight_country(country, colour)
 
-    def plot(self, **kwargs):
-        '''Plot
+    def _make_plot(self, **kwargs):
+        '''Make Plot
 
         Plot CosmoStat map.
 
@@ -151,5 +151,26 @@ class CosmoStatMap:
         plt.ylabel('Latitude')
         plt.xlabel('Longitude')
 
+    def show(self, **kwargs):
+        '''Plot
+
+        Show CosmoStat map.
+
+        '''
+
+        self._make_plot(**kwargs)
+
         # Show Map
         plt.show()
+
+    def save(self, file_name='cosmostat_map.png', **kwargs):
+        '''Save
+
+        Save CosmoStat map.
+
+        '''
+
+        self._make_plot(**kwargs)
+
+        # Show Map
+        plt.savefig(file_name)
