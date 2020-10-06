@@ -1,27 +1,10 @@
 CosmoStat Map
 =============
 
-|travis| |coveralls| |python35| |python36| |python37| |python38| 
+|actions|
 
-.. |travis| image:: https://travis-ci.org/sfarrens/cosmostatmap.svg?branch=master
-  :target: https://travis-ci.org/sfarrens/cosmostatmap
-
-.. |coveralls| image:: https://coveralls.io/repos/github/sfarrens/cosmostatmap/badge.svg?branch=master
-  :target: https://coveralls.io/github/sfarrens/cosmostatmap?branch=master
-
-.. |python35| image:: https://img.shields.io/badge/python-3.5-green.svg
-  :target: https://www.python.org/
-
-.. |python36| image:: https://img.shields.io/badge/python-3.6-green.svg
-  :target: https://www.python.org/
-
-.. |python37| image:: https://img.shields.io/badge/python-3.7-green.svg
-  :target: https://www.python.org/
-
-.. |python38| image:: https://img.shields.io/badge/python-3.8-green.svg
-  :target: https://www.python.org/
-
-
+.. |actions| image:: https://github.com/CosmoStat/cosmostatmap/workflows/CI/badge.svg?branch=master
+  :target: https://github.com/CosmoStat/cosmostatmap/actions
 
 :Author: Samuel Farrens `(samuel.farrens@cea.fr) <samuel.farrens@cea.fr>`_
 
@@ -29,15 +12,11 @@ CosmoStat Map
 
 :Release Date: 31/03/2020
 
-:Documentation: |link-to-docs|
-
-:Repository: |link-to-repo|
-
 .. |link-to-docs| raw:: html
 
   <a href="https://sfarrens.github.io/cosmostatmap"
   target="_blank">https://sfarrens.github.io/cosmostatmap</a>
-  
+
 .. |link-to-repo| raw:: html
 
   <a href="https://github.com/sfarrens/cosmostatmap"
@@ -68,4 +47,4 @@ Example
 .. code-block:: python
 
    from cosmostatmap import CosmoStatMap
-   CosmoStatMap('./data/countries.yml').plot()
+   CosmoStatMap('./data/countries.yml').show()
