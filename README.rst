@@ -4,7 +4,7 @@ CosmoStat Map
 |actions|
 
 .. |actions| image:: https://github.com/CosmoStat/cosmostatmap/workflows/CI/badge.svg?branch=master
-  :target: https://travis-ci.org/CosmoStat/cosmostatmap
+  :target: https://github.com/CosmoStat/cosmostatmap/actions
 
 :Author: Samuel Farrens `(samuel.farrens@cea.fr) <samuel.farrens@cea.fr>`_
 
