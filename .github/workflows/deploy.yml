@@ -12,27 +12,29 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v1
+      - name: Set up Conda
+        uses: conda-incubator/setup-miniconda@v1
         with:
+          auto-update-conda: true
           python-version: 3.8
 
-      - name: Install dependencies
-        run: |
-          wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
-          bash miniconda.sh -b -p $HOME/miniconda
-          source "$HOME/miniconda/etc/profile.d/conda.sh"
-          conda env create -f environment.yml
-          mkdir build
+      - name: Conda info
+        shell: bash -l {0}
+        run: conda info
+
       - name: Install Package
+        shell: bash -l {0}
         run: |
           conda activate cosmostatmap
           python setup.py install
+
       - name: Build Map
+        shell: bash -l {0}
         run: |
           conda activate cosmostatmap
           python scripts/generate_map.py
           mv cosmostat_map.png ./build
+
       - name: GitHub Pages action
         uses: peaceiris/actions-gh-pages@v3.5.9
         with:
