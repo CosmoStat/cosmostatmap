@@ -23,13 +23,14 @@ jobs:
           bash miniconda.sh -b -p $HOME/miniconda
           source "$HOME/miniconda/etc/profile.d/conda.sh"
           conda env create -f environment.yml
-          conda activate cosmostatmap
           mkdir build
       - name: Install Package
         run: |
+          conda activate cosmostatmap
           python setup.py install
       - name: Build Map
         run: |
+          conda activate cosmostatmap
           python scripts/generate_map.py
           mv cosmostat_map.png ./build
       - name: GitHub Pages action
