@@ -10,6 +10,7 @@ This module contains the class for making the CosmoStat Map.
 
 import yaml
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 import geopandas as gpd
 from descartes import PolygonPatch
 
@@ -151,6 +152,11 @@ class CosmoStatMap:
         plt.ylabel('Latitude')
         plt.xlabel('Longitude')
 
+        custom_lines = [Line2D([0], [0], color=self._current_colour, lw=5),
+                        Line2D([0], [0], color=self._former_colour, lw=5)]
+
+        self._axis.legend(custom_lines, ['Current Members', 'Former Members'])
+
     def show(self, **kwargs):
         '''Plot
 
@@ -173,4 +179,4 @@ class CosmoStatMap:
         self._make_plot(**kwargs)
 
         # Show Map
-        plt.savefig(file_name)
+        plt.savefig(file_name, transparent=True)
