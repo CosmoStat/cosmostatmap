@@ -1,5 +1,6 @@
 current:
     - 'Argentina'
+    - 'Brazil'
     - 'China'
     - 'Costa Rica'
     - 'France'
@@ -15,7 +16,6 @@ current:
 former:
     - 'Algeria'
     - 'Australia'
-    - 'Brazil'
     - 'Cameroon'
     - 'Greece'
     - 'Iran'
