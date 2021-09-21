@@ -9,5 +9,6 @@ dependencies:
   - numpy
   - pip>=19.3
   - pip:
+    - descartes>=1.1.0
     - geoplot>=0.4.0
     - pyyaml>=5.3.1
