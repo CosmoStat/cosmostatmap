@@ -1,14 +1,12 @@
 name: cosmostatmap
 channels:
-  - defaults
+  - conda-forge
 dependencies:
-  - python=3.7
+  - python=3.10
+  - descartes
   - geopandas>=0.6.1
+  - geoplot>=0.4.0
   - jupyter>=1.0.0
   - matplotlib
   - numpy
-  - pip>=19.3
-  - pip:
-    - descartes>=1.1.0
-    - geoplot>=0.4.0
-    - pyyaml>=5.3.1
+  - pyyaml
