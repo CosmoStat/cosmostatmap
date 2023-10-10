@@ -10,13 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v3
 
       - name: Set up conda
         uses: conda-incubator/setup-miniconda@v2
         with:
           auto-update-conda: true
-          python-version: 3.8
+          python-version: 3.11
 
       - name: Build conda environment
         shell: bash -l {0}
@@ -26,13 +27,13 @@ jobs:
         shell: bash -l {0}
         run: |
           conda activate cosmostatmap
-          python setup.py install
+          pip install .
 
       - name: Build map
         shell: bash -l {0}
         run: |
           conda activate cosmostatmap
-          python scripts/generate_map.py
+          generate_map.py
           mv cosmostat_map.png ./build
 
       - name: GitHub pages action

@@ -1,0 +1,49 @@
+[project]
+name = "cosmostatmap"
+readme = "README.rst"
+requires-python = ">=3.10"
+authors = [{ "name" = "Samuel Farrens", "email" = "samuel.farrens@cea.fr" }]
+maintainers = [{ "name" = "Samuel Farrens", "email" = "samuel.farrens@cea.fr" }]
+description = 'The CosmoStatMap shows the diversity of the CosmoStat team.'
+dependencies = [
+    "descartes",
+    "geopandas",
+    "geoplot",
+    "matplotlib",
+    "numpy",
+    "pyyaml",
+]
+version = "0.0.1"
+
+[project.optional-dependencies]
+docs = ["myst-parser", "numpydoc", "sphinx", "sphinx-book-theme"]
+lint = ["black", "isort"]
+test = [
+    "pytest",
+    "pytest-black",
+    "pytest-cov",
+    "pytest-emoji",
+    "pytest-pydocstyle",
+]
+
+# Install for development
+dev = ["cosmostatmap[docs,lint,test]"]
+
+[tool.setuptools]
+script-files = ["scripts/generate_map.py"]
+
+[tool.black]
+line-length = 88
+
+[tool.pydocstyle]
+convention = "numpy"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--verbose",
+    "--black",
+    "--emoji",
+    "--pydocstyle",
+    "--cov=cosmostatmap",
+]
+testpaths = ["src"]
