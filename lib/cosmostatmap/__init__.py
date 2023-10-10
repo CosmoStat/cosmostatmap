@@ -1,6 +1,4 @@
-# -*- coding: utf-8 -*-
-
-"""COSMOSTATMAP PACKAGE
+"""COSMOSTATMAP PACKAGE.
 
 The CosmoStatMap shows the diversity of the CosmoStat team.
 
@@ -9,4 +7,3 @@ The CosmoStatMap shows the diversity of the CosmoStat team.
 """
 
 from .map import CosmoStatMap
-from .info import __version__, __about__
