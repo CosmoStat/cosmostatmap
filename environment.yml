@@ -4,7 +4,7 @@ channels:
 dependencies:
   - python=3.10
   - descartes
-  - geopandas>=0.6.1
+  - geopandas>=0.6.1, <1.0
   - geoplot>=0.4.0
   - jupyter>=1.0.0
   - matplotlib
