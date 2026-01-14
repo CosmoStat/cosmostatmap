@@ -38,7 +38,7 @@ Installation
 
    conda env create -f environment.yml
    conda activate cosmostatmap
-   python setup.py install
+   python -m pip install .
 
 
 Example
